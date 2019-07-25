@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="natasha">
+
+      <title>projeto</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="style.css">
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- fonte icones redes sociais -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- fonte do google -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+      <!-- animacoes -->
+      <link rel="stylesheet" href="animate.css">
+      <script src="wow.min.js"></script>
+
+</head>
+<body>
+      <div class="wrapper">
+
+            <!--------------- comeco da barra de navegacao --------------->
+            <nav>
+                  <span id="brand">
+                        <a href="index.html">natasha</a>
+                  </span>
+
+                  <ul id="menu">
+                        <li><a href="index.html">home<span>.</span></a></li>
+                        <li><a href="work.html">projeto<span>.</span></a></li>
+      
+                  </ul>
+
+                  <div id="toggle">
+                        <div class="span">menu</div>
+                  </div>
+
+            </nav>
+
+            <div id="resize">
+                  <div class="close-btn">close</div>
+
+                  <ul id="menu">
+                        <li><a href="index.html">home<span>.</span></a></li>
+                        <li><a href="work.html">projeto<span>.</span></a></li>
+                  </ul>
+            </div>
+
+            <!--------------- fim da barra de navegacao --------------->
+
+            <div class="whitespace"></div>
+
+            <!--------------- comeco da seccao hero --------------->
+            <div class="container">
+                  <div class="hero-content">
+                        <br><br>
+
+                        <div class="row">
+                              <div class="col-lg-8">
+
+                                    <h3 class="wow fadeInUp" data-wow-delay="1s">projeto.</h3><br>
+                                    <p class="wow fadeInUp" data-wow-delay="1.2s">O projeto de desenvolvimento que mais gostei de trabalhar foi o desenvolvimento de um aplicativo onde a ideia era ajudar os Jovens da Geração Z a melhorar seus hábitos de estudo no dia-a-dia.
+                                          Este projeto foi realizado através de uma atividade desenvolvida pela faculdade FIAP em conjunto com a Samsung.
+                                    </p>
+                                    <img class="wow fadeInUp" data-wow-delay="1.2s" src="my.png">
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <!--------------- fim da seccao hero --------------->
+
+            
+
+            <!--------------- comeco do footer --------------->
+            <div class="footer">
+                  <div class="container">
+                        <br><br>
+
+                        <div class="collab">
+                              <div class="row">
+                                    <div class="col-lg-12">
+                                          
+                                    </div>
+                              </div>
+                        </div>
+
+                        <br>
+
+                        <div class="hr">
+                              <div class="row"></div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="info">
+                                    <div class="row">
+                                          <div class="col-lg-4" id="personal">
+                                                <p class="wow fadeInUp">redes sociais</p>
+                                                <h4 class="wow fadeInUp" data-wow-delay="0.2s"><a href="https://www.instagram.com/natashagp/"><i class="fa fa-instagram"></i></a></h4>
+                                                <br><br>
+                                          </div>
+      
+                                          <div class="col-lg-4" id="media">
+                                                <p class="wow fadeInUp" data-wow-delay="0s">linkedin</p>
+      
+                                                <ul>
+                                                      <li id="linkedin" class="wow fadeInUp" data-wow-delay="0.4s"><a href="https://www.linkedin.com/in/natasha-paulon-a91162139/"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+      
+                                                <br><br>
+                                          </div>
+      
+                                          <div class="col-lg-4" id="address">
+                                                <p class="wow fadeInUp" data-wow-delay="0s">entre em contato</p>
+                                                <h4 class="wow fadeInUp" data-wow-delay="0.2s">natasha.paulon@gmail.com</h4>
+                                                <br><br>
+                                          </div>
+                                    </div>
+                              </div>
+                  </div>
+                  <footer>
+
+                              <section class="bottom-bar">
+                                  <p>Copyright &copy; 2019 | Todos os direitos reservados</p>
+                              </section>
+                        </footer>
+            </div>
+
+            <!--------------- fim do footer --------------->
+
+            <br><br><br><br>
+
+      </div>
+
+      <!-- greensock cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script type="text/javascript">
+      // navegacao comeca aqui
+      $("#toggle").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $("#resize ul li a").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $(".close-btn").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      // navegacao acaba aqui
+      // comeco da animacao da navegacao
+      TweenMax.from("#brand", 1, {
+            delay: 0.4,
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
+      })
+      TweenMax.staggerFrom("#menu li a", 1, {
+            delay: 0.4,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+      // fim da animacao da navegacao
+      new WOW().init();
+      </script>
+</body>
+</html>
